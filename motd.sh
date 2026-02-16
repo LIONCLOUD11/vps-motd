@@ -1,5 +1,5 @@
 #!/bin/bash
-# UnixNodes Advanced MOTD Installer
+# Code X Ayan Advanced MOTD Installer
 
 echo "🔧 Installing Custom MOTD..."
 
@@ -7,7 +7,7 @@ echo "🔧 Installing Custom MOTD..."
 chmod -x /etc/update-motd.d/* 2>/dev/null
 
 # Create dynamic stats MOTD script
-cat << 'EOF' > /etc/update-motd.d/00-unixnodes
+cat << 'EOF' > /etc/update-motd.d/00-lioncloud
 #!/bin/bash
 
 # Colors
@@ -31,16 +31,15 @@ IP=$(hostname -I | awk '{print $1}')
 UPTIME=$(uptime -p | sed 's/up //')
 
 # Header + Logo
-echo -e "${CYAN}┌──────────────────────────────────────────────────────────────┐"
-echo -e "│  _    _           _           _   _           _              │"
-echo -e "│ | |  | |         (_)         | \\ | |         | |             │"
-echo -e "│ | |  | |  _ __    _  __  __  |  \\| | ___   __| | ___  ___    │"
-echo -e "│ | |  | | | '_ \\  | | \\ \\/ /  | . \` |/ _ \\ / _\` |/ _ \\/ __|   │"
-echo -e "│ | |__| | | | | | | |  >  <   | |\\  | (_) | (_| |  __/\\__ \\   │"
-echo -e "│  \\____/  |_| |_| |_| /_/\\_\\  |_| \\_|\\___/ \\__,_|\\___||___/   │"
-echo -e "└──────────────────────────────────────────────────────────────┘${RESET}"
+echo -e "${CYAN}"
+echo "  _      _               _____ _                 _ "
+echo " | |    (_)             / ____| |               | |"
+echo " | |     _  ___  _ __  | |    | | ___  _   _  __| |"
+echo " | |    | |/ _ \| '_ \ | |    | |/ _ \| | | |/ _\` |"
+echo " | |____| | (_) | | | || |____| | (_) | |_| | (_| |"
+echo " |______|_|\___/|_| |_| \_____|_|\___/ \__,_|\__,_|${RESET}"
 
-echo -e "${GREEN} Welcome to UnixNodes Datacenter! 🚀 ${RESET}\n"
+echo -e "${GREEN} Welcome to LionCloud Datacenter! 🚀 ${RESET}\n"
 
 # System Stats Table
 echo -e "${BLUE}📊 System Information:${RESET} (as of $(date))\n"
@@ -52,12 +51,12 @@ printf "  ${YELLOW}Users Logged :${RESET} %s\n" "$USERS"
 printf "  ${YELLOW}IP Address   :${RESET} %s\n" "$IP"
 printf "  ${YELLOW}Uptime       :${RESET} %s\n\n" "$UPTIME"
 
-echo -e "${CYAN}Need help? Support is always available: support@unixnodes.xyz${RESET}"
-echo -e "Website: ${BLUE}unixnodes.xyz${RESET}"
-echo -e "${GREEN}Quality Wise — No Compromise 😄${RESET}"
+echo -e "${CYAN}Need help? Support is always available: codexayan@zohomail.in${RESET}"
+echo -e "Website: ${BLUE}www.lioncloud.in${RESET}"
+echo -e "${GREEN}Quality Wise — No Compromise 👑${RESET}"
 EOF
 
 chmod +x /etc/update-motd.d/00-unixnodes
 
-echo "🎉 UnixNodes MOTD Installed Successfully!"
+echo "🎉 LionCloud MOTD Installed Successfully!"
 echo "➡ Reconnect SSH to see the new MOTD."
