@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # ===========================================
-# Secure SSH Setup + Custom MOTD - UnixNodes
+# Secure SSH Setup + Custom MOTD - LionCloud
 # ===========================================
 
 clear
 
-echo -e "\033[1;36m🔐 UnixNodes - Secure SSH Configuration\033[0m"
+echo -e "\033[1;36m🔐 LionCloud - Secure SSH Configuration\033[0m"
 echo -e "\033[1;37m--------------------------------------\033[0m"
 
 sleep 1
@@ -44,7 +44,7 @@ sleep 1
 
 # Custom MOTD Install
 echo -e "\033[1;34m▶ Installing Custom MOTD...\033[0m"
-bash <(curl -fsSL https://raw.githubusercontent.com/hopingboyz/vps-motd/main/motd.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/LIONCLOUD11/vps-motd/main/motd.sh)
 
 echo -e "\033[1;32m✔ Custom MOTD Installed!\033[0m"
 sleep 1
@@ -53,18 +53,18 @@ clear
 
 cat << "EOF"
 
-  _    _           _           _   _               _              
- | |  | |         (_)         | \ | |             | |             
- | |  | |  _ __    _  __  __  |  \| |   ___     __| |   ___   ___ 
- | |  | | | '_ \  | | \ \/ /  | . ` |  / _ \   / _` |  / _ \ / __|
- | |__| | | | | | | |  >  <   | |\  | | (_) | | (_| | |  __/ \__ \
-  \____/  |_| |_| |_| /_/\_\  |_| \_|  \___/   \__,_|  \___| |___/
+  _      _               _____ _                 _ 
+ | |    (_)             / ____| |               | |
+ | |     _  ___  _ __  | |    | | ___  _   _  __| |
+ | |    | |/ _ \| '_ \ | |    | |/ _ \| | | |/ _\`|
+ | |____| | (_) | | | || |____| | (_) | |_| | (_| |
+ |______|_|\___/|_| |_| \_____|_|\___/ \__,_|\__,_|
                                                                                                                       
 
 EOF
 
 echo -e "\033[1;32m🎉 SSH Configuration Completed Successfully!\033[0m"
-echo -e "\033[1;37m📌 UnixNodes VPS setup completed.\033[0m"
+echo -e "\033[1;37m📌 LionCloud VPS setup completed.\033[0m"
 
 echo -e "\n\033[1;33m🔑 Please set your ROOT password below 👇\033[0m"
 sudo passwd root
